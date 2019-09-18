@@ -36,6 +36,12 @@ extension StringProtocol {
         }
         return result
     }
+    
+    
+    func nsRange(from range: Range<Index>) -> NSRange {
+        return .init(range, in: self)
+    }
+    
 }
 extension String {
     func ranges(of searchString: String) -> [Range<String.Index>] {

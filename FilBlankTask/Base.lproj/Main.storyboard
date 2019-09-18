@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7GU-hN-wjV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J8H-0t-L1O">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,13 +49,62 @@
                     <view key="view" contentMode="scaleToFill" id="NOd-dd-RyK">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading..." translatesAutoresizingMaskIntoConstraints="NO" id="5Is-Ak-gG0">
+                                <rect key="frame" x="20" y="47" width="716" height="314"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFj-pd-Ksq">
+                                <rect key="frame" x="0.0" y="369" width="736" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Submit Solution">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tFj-pd-Ksq" firstAttribute="trailing" secondItem="5Is-Ak-gG0" secondAttribute="trailing" id="1Fa-1q-pbd"/>
+                            <constraint firstItem="5Is-Ak-gG0" firstAttribute="height" secondItem="NOd-dd-RyK" secondAttribute="height" constant="-100" id="5I4-Jm-jow"/>
+                            <constraint firstItem="tFj-pd-Ksq" firstAttribute="leading" secondItem="NOd-dd-RyK" secondAttribute="leading" id="Ha4-ae-Z1s"/>
+                            <constraint firstItem="tFj-pd-Ksq" firstAttribute="top" secondItem="5Is-Ak-gG0" secondAttribute="bottom" constant="8" symbolic="YES" id="Lic-Qb-fS0"/>
+                            <constraint firstItem="tFj-pd-Ksq" firstAttribute="bottom" secondItem="jZa-Yq-FdB" secondAttribute="bottom" id="NO9-cZ-hp1"/>
+                            <constraint firstItem="tFj-pd-Ksq" firstAttribute="width" secondItem="NOd-dd-RyK" secondAttribute="width" id="PJI-F7-zLN"/>
+                            <constraint firstItem="5Is-Ak-gG0" firstAttribute="top" secondItem="NOd-dd-RyK" secondAttribute="top" constant="47" id="dw3-oj-NUq"/>
+                            <constraint firstItem="5Is-Ak-gG0" firstAttribute="leading" secondItem="NOd-dd-RyK" secondAttribute="leadingMargin" id="foz-fe-F56"/>
+                            <constraint firstItem="5Is-Ak-gG0" firstAttribute="width" secondItem="NOd-dd-RyK" secondAttribute="width" constant="-20" id="tYj-uG-IVm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jZa-Yq-FdB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9xM-Co-bcI"/>
+                    <connections>
+                        <outlet property="textView" destination="5Is-Ak-gG0" id="YmY-pV-Km3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJo-V3-zmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1051" y="114"/>
+            <point key="canvasLocation" x="1823.6413043478262" y="113.04347826086958"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3sq-ge-Khh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J8H-0t-L1O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TxH-cN-cWo">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7GU-hN-wjV" kind="relationship" relationship="rootViewController" id="hin-Lw-gC6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLu-pu-Hu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.8152173913045" y="113.04347826086958"/>
         </scene>
     </scenes>
 </document>

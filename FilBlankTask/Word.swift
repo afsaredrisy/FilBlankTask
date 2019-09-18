@@ -11,7 +11,7 @@ import Foundation
 
 class Word{
     
-    var startIndex: Int
+    /*var startIndex: Int
     var end: Int
     var value: String
     
@@ -21,6 +21,21 @@ class Word{
             self.end = end
             self.value = value
     }
+    */
+ 
+    var value: String
+    var range: Range<String.Index>
     
+    
+    init(value: String, range: Range<String.Index>) {
+        self.value = value
+        self.range = range
+    }
+ 
+ 
+ 
+ 
+ 
+ 
     
 }
