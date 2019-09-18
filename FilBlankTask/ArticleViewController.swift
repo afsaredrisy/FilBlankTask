@@ -347,6 +347,54 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
         
     }
 
+    func showAlert(msg: String){
+        
+        
+        let alert = UIAlertController(title: "FillBlankGame Alert", message: msg, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+            
+            print("Click event handle")
+            //alert.dismiss(animated: true, completion: nil)
+            
+        }))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
+    //MARK: Submission
+    
+    @IBAction func submit(_ sender: Any) {
+        
+        
+        if answer.count < 10{
+            
+            // Not all filled
+            showAlert(msg: "Fill all blanks and then submit")
+            return
+            
+        }
+        evaluateResult()
+        
+    }
+    
+    
+    func evaluateResult(){
+        var score = 0
+        for word in answer.keys {
+            
+            if word == answer[word]{
+                score = score + 1
+                
+            }
+            
+        }
+        print("score is \(score)")
+        showAlert(msg: "Your score is \(score)")
+        
+    }
+    
+    
     
     
 }
@@ -400,14 +448,18 @@ extension ArticleViewController{
      }
      
      */
+    func updateAnswer(ans: String , actual: String){
+        answer[actual] = ans
+    }
+    
     
     func startSheetWithWords(nsrange: NSRange, myTextView: UITextView, actualWord: String){
-            startSheetWithWords(nsrange: nsrange, myTextView: myTextView)
+            startSheetWithWords(nsrange: nsrange, myTextView: myTextView,with: actualWord)
             updateAttributedRange(nsrange: nsrange, word: actualWord)
     }
     
     
-    func startSheetWithWords(nsrange: NSRange, myTextView: UITextView){
+    func startSheetWithWords(nsrange: NSRange, myTextView: UITextView, with: String){
         let actionSheet = Hokusai()
         for word in listItems{
             actionSheet.addButton(word, action: {
@@ -415,6 +467,7 @@ extension ArticleViewController{
                 //let newrange = NSMakeRange(nsrange.location, self.nSremovedWords[nsrange]!.count)
                 self.placeUserSelectedWord(wordd: word, nsrange: nsrange, myTextView: myTextView)
                 self.listItems.remove(word)
+                self.updateAnswer(ans: word, actual: with)
                 print("you pressd \(word)")
                
             })
