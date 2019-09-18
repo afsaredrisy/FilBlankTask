@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J8H-0t-L1O">
-    <device id="retina5_5" orientation="landscape">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MetaViewController" customModule="FilBlankTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ypf-6c-kVN">
-                                <rect key="frame" x="20" y="0.0" width="736" height="414"/>
+                                <rect key="frame" x="16" y="20" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -47,17 +47,17 @@
             <objects>
                 <viewController storyboardIdentifier="ArticleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7GU-hN-wjV" customClass="ArticleViewController" customModule="FilBlankTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOd-dd-RyK">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading..." translatesAutoresizingMaskIntoConstraints="NO" id="5Is-Ak-gG0">
-                                <rect key="frame" x="20" y="47" width="716" height="314"/>
+                                <rect key="frame" x="20" y="47" width="300" height="468"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFj-pd-Ksq">
-                                <rect key="frame" x="0.0" y="369" width="736" height="45"/>
+                                <rect key="frame" x="0.0" y="523" width="320" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Submit Solution">
@@ -91,13 +91,77 @@
             </objects>
             <point key="canvasLocation" x="1823.6413043478262" y="113.04347826086958"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="YH0-Rb-q3B">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KS6-Be-O7u" customClass="ResultViewController" customModule="FilBlankTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="14v-Za-MzK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txR-cL-nNo">
+                                <rect key="frame" x="20" y="207" width="284" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXV-gG-Bse">
+                                <rect key="frame" x="20" y="360" width="284" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <state key="normal" title="RePlay">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rs6-Se-Jn1">
+                                <rect key="frame" x="20" y="261" width="284" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.2872949655" blue="0.21171424159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAk-Ef-ODJ">
+                                <rect key="frame" x="20" y="436" width="284" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <state key="normal" title="See Result">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yXV-gG-Bse" firstAttribute="trailing" secondItem="gAk-Ef-ODJ" secondAttribute="trailing" id="5M2-FI-4KB"/>
+                            <constraint firstItem="txR-cL-nNo" firstAttribute="leading" secondItem="Rs6-Se-Jn1" secondAttribute="leading" id="64f-Ii-F6b"/>
+                            <constraint firstItem="yXV-gG-Bse" firstAttribute="leading" secondItem="gAk-Ef-ODJ" secondAttribute="leading" id="6pr-lF-atM"/>
+                            <constraint firstItem="Rs6-Se-Jn1" firstAttribute="leading" secondItem="yXV-gG-Bse" secondAttribute="leading" id="Mx1-d4-kd7"/>
+                            <constraint firstItem="txR-cL-nNo" firstAttribute="trailing" secondItem="Rs6-Se-Jn1" secondAttribute="trailing" id="RRj-6V-E2C"/>
+                            <constraint firstItem="txR-cL-nNo" firstAttribute="top" secondItem="ZLn-gl-hT0" secondAttribute="top" constant="187" id="S1v-u5-bGA"/>
+                            <constraint firstItem="txR-cL-nNo" firstAttribute="leading" secondItem="ZLn-gl-hT0" secondAttribute="leading" constant="20" id="Vgu-jK-jPZ"/>
+                            <constraint firstItem="Rs6-Se-Jn1" firstAttribute="top" secondItem="txR-cL-nNo" secondAttribute="bottom" constant="20" id="WI5-cn-qV9"/>
+                            <constraint firstItem="Rs6-Se-Jn1" firstAttribute="trailing" secondItem="yXV-gG-Bse" secondAttribute="trailing" id="Yq3-J2-dJw"/>
+                            <constraint firstItem="txR-cL-nNo" firstAttribute="trailing" secondItem="14v-Za-MzK" secondAttribute="trailingMargin" id="ezb-bE-yqV"/>
+                            <constraint firstItem="gAk-Ef-ODJ" firstAttribute="top" secondItem="yXV-gG-Bse" secondAttribute="bottom" constant="31" id="iNA-4Y-E93"/>
+                            <constraint firstItem="yXV-gG-Bse" firstAttribute="top" secondItem="Rs6-Se-Jn1" secondAttribute="bottom" constant="51" id="twB-WA-070"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZLn-gl-hT0"/>
+                    </view>
+                    <connections>
+                        <outlet property="replay" destination="yXV-gG-Bse" id="1Fv-Av-JKq"/>
+                        <outlet property="result" destination="gAk-Ef-ODJ" id="sfp-Df-mya"/>
+                        <outlet property="scoreLabel" destination="Rs6-Se-Jn1" id="po6-kN-qIi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sv1-43-OxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820" y="113"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3sq-ge-Khh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J8H-0t-L1O" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TxH-cN-cWo">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

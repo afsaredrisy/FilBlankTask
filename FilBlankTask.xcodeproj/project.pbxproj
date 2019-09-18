@@ -12,6 +12,7 @@
 		120C99F02331F96000AE9284 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C99EF2331F96000AE9284 /* Word.swift */; };
 		120C99F22331FBFC00AE9284 /* StringProtocol+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C99F12331FBFC00AE9284 /* StringProtocol+Range.swift */; };
 		120C9A8823323A7900AE9284 /* Hokusai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C9A8723323A7900AE9284 /* Hokusai.swift */; };
+		120C9A8E2332AEAD00AE9284 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C9A8D2332AEAD00AE9284 /* ResultViewController.swift */; };
 		1216DAB32331465400BCCD80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1216DAB22331465400BCCD80 /* AppDelegate.swift */; };
 		1216DAB52331465400BCCD80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1216DAB42331465400BCCD80 /* ViewController.swift */; };
 		1216DAB82331465400BCCD80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1216DAB62331465400BCCD80 /* Main.storyboard */; };
@@ -109,6 +110,7 @@
 		120C99EF2331F96000AE9284 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		120C99F12331FBFC00AE9284 /* StringProtocol+Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+Range.swift"; sourceTree = "<group>"; };
 		120C9A8723323A7900AE9284 /* Hokusai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hokusai.swift; sourceTree = "<group>"; };
+		120C9A8D2332AEAD00AE9284 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		1216DAAF2331465400BCCD80 /* FilBlankTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilBlankTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1216DAB22331465400BCCD80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1216DAB42331465400BCCD80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -187,7 +189,6 @@
 		1216DAA62331465400BCCD80 = {
 			isa = PBXGroup;
 			children = (
-				120C9A8723323A7900AE9284 /* Hokusai.swift */,
 				1216DAB12331465400BCCD80 /* FilBlankTask */,
 				1216DAC62331465500BCCD80 /* FilBlankTaskTests */,
 				1216DAD12331465500BCCD80 /* FilBlankTaskUITests */,
@@ -212,6 +213,8 @@
 			children = (
 				1216DAF9233157E500BCCD80 /* WikipediaKit.xcodeproj */,
 				1216DAB22331465400BCCD80 /* AppDelegate.swift */,
+				120C9A8D2332AEAD00AE9284 /* ResultViewController.swift */,
+				120C9A8723323A7900AE9284 /* Hokusai.swift */,
 				120C99EF2331F96000AE9284 /* Word.swift */,
 				1216DAB42331465400BCCD80 /* ViewController.swift */,
 				1216DAE2233146D900BCCD80 /* MetaViewController.swift */,
@@ -521,6 +524,7 @@
 				1216DAE3233146D900BCCD80 /* MetaViewController.swift in Sources */,
 				120C99EE2331F24400AE9284 /* String+NSLinguisticTagger.swift in Sources */,
 				120C99E82331F20200AE9284 /* ArticleViewController.swift in Sources */,
+				120C9A8E2332AEAD00AE9284 /* ResultViewController.swift in Sources */,
 				1216DAE1233146B000BCCD80 /* NSAttributedStringKey+CustomAttribute.swift in Sources */,
 				120C99F22331FBFC00AE9284 /* StringProtocol+Range.swift in Sources */,
 				120C9A8823323A7900AE9284 /* Hokusai.swift in Sources */,

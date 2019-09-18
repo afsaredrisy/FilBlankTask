@@ -390,10 +390,23 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
             
         }
         print("score is \(score)")
-        showAlert(msg: "Your score is \(score)")
+        //showAlert(msg: "Your score is \(score)")
+        didResultEvaluated(score: score)
         
     }
-    
+    func didResultEvaluated(score: Int){
+        
+        let storyBord = UIStoryboard(name: "Main", bundle: nil)
+        let resultViewController = storyBord.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController
+        
+        guard let viewrController = resultViewController else {
+            fatalError("Some thing wrong with identifier")
+        }
+        viewrController.score = score
+        self.present(viewrController, animated: true, completion: nil)
+        
+        
+    }
     
     
     
