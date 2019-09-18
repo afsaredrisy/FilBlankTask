@@ -247,6 +247,18 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
         }
         return nil
         
+    }
+    
+    
+    func getNSRange(word: String) -> NSRange?{
+        
+        for key in nSremovedWords.keys{
+            
+            if word == nSremovedWords[key]{
+                return key
+            }
+        }
+        return nil
         
     }
     
@@ -378,6 +390,12 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
         
     }
     
+    // will implement 
+    func markWord(nsrange: NSRange, is: Bool){
+        
+        
+        
+    }
     
     func evaluateResult(){
         var score = 0
@@ -385,6 +403,13 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
             
             if word == answer[word]{
                 score = score + 1
+                
+                // will require some more time
+               /* guard let nsRange = getNSRange(word: word) else{
+                    fatalError("No Range found for \(word)")
+                }
+                */
+                
                 
             }
             
@@ -414,20 +439,7 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
 
 extension ArticleViewController{
     
-   /* func startActionSheet(){
-        
-        let actionSheet = Hokusai()
-        actionSheet.addButton("Item1", target: self, selector: "onTappedWord")
-        actionSheet.addButton("item2", action: {
-            print("Action 2")
-            })
-        
-        actionSheet.show()
-    }
-    @objc func onTappedWord(){
-        
-        print("Tapped ")
-    }*/
+ 
     
     
     func updateAttributedRange(nsrange: NSRange, word: String){
@@ -507,21 +519,4 @@ extension ArticleViewController{
     
     
 }
-extension NSAttributedString {
-    func getAttributes() -> [(NSRange, [(String, AnyObject)])] {
-        var attributesOverRanges : [(NSRange, [(String, AnyObject)])] = []
-        var rng = NSRange()
-        var idx = 0
-        
-        while idx < self.length {
-            let foo = self.attributes(at: idx, effectiveRange: &rng)
-            var attributes : [(String, AnyObject)] = []
-            
-            for (k, v) in foo { attributes.append((k.rawValue, v as AnyObject)) }
-            attributesOverRanges.append((rng, attributes))
-            
-            idx = max(idx + 1, rng.toRange()?.endIndex ?? 0)
-        }
-        return attributesOverRanges
-    }
-}
+
