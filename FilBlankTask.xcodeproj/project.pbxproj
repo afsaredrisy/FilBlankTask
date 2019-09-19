@@ -193,7 +193,6 @@
 		1216DAA62331465400BCCD80 = {
 			isa = PBXGroup;
 			children = (
-				1207E9452333E7F5000154D2 /* SplashViewController.swift */,
 				1216DAB12331465400BCCD80 /* FilBlankTask */,
 				1216DAC62331465500BCCD80 /* FilBlankTaskTests */,
 				1216DAD12331465500BCCD80 /* FilBlankTaskUITests */,
@@ -218,6 +217,7 @@
 			children = (
 				1216DAF9233157E500BCCD80 /* WikipediaKit.xcodeproj */,
 				1216DAB22331465400BCCD80 /* AppDelegate.swift */,
+				1207E9452333E7F5000154D2 /* SplashViewController.swift */,
 				120C9A8D2332AEAD00AE9284 /* ResultViewController.swift */,
 				120C9A8723323A7900AE9284 /* Hokusai.swift */,
 				120C99EF2331F96000AE9284 /* Word.swift */,
