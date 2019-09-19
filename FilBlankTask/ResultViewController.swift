@@ -30,7 +30,7 @@ class ResultViewController: UIViewController {
     
 
     func setScore(){
-        print(score)
+       
         guard let s = self.score else {
             scoreLabel.text = "0"
             print("No Value found")
