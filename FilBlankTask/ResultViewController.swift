@@ -13,7 +13,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var replay: UIButton!
     @IBOutlet weak var result: UIButton!
-    
+    @IBOutlet weak var textLabel: UILabel!
     var score: Int?
     var attributedText: NSAttributedString?
     
@@ -37,6 +37,14 @@ class ResultViewController: UIViewController {
             return
         }
         scoreLabel.text = "" + String(s)
+        
+        let manager = MaxScoreManager()
+        let maxScore = manager.getMax()
+        if maxScore < s{
+            textLabel.text = "Congratulation MAX Score"
+            manager.saveMaxScore(score: s)
+        }
+        
     }
     
     

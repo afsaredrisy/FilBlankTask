@@ -157,6 +157,7 @@
                         <outlet property="replay" destination="yXV-gG-Bse" id="1Fv-Av-JKq"/>
                         <outlet property="result" destination="gAk-Ef-ODJ" id="sfp-Df-mya"/>
                         <outlet property="scoreLabel" destination="Rs6-Se-Jn1" id="po6-kN-qIi"/>
+                        <outlet property="textLabel" destination="txR-cL-nNo" id="LLI-wP-G3U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sv1-43-OxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

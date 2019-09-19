@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1207E9462333E7F5000154D2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1207E9452333E7F5000154D2 /* SplashViewController.swift */; };
+		1207E94C2333E912000154D2 /* MaxScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1207E94B2333E912000154D2 /* MaxScoreManager.swift */; };
 		120C99E82331F20200AE9284 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C99E72331F20200AE9284 /* ArticleViewController.swift */; };
 		120C99EE2331F24400AE9284 /* String+NSLinguisticTagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C99ED2331F24400AE9284 /* String+NSLinguisticTagger.swift */; };
 		120C99F02331F96000AE9284 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C99EF2331F96000AE9284 /* Word.swift */; };
@@ -107,6 +108,7 @@
 		09F62E7D67C3A67DDE4EDE84 /* Pods-FilBlankTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilBlankTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-FilBlankTaskTests/Pods-FilBlankTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0B5EB30919AEA32B4350BDB2 /* Pods_FilBlankTask_FilBlankTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilBlankTask_FilBlankTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1207E9452333E7F5000154D2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		1207E94B2333E912000154D2 /* MaxScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxScoreManager.swift; sourceTree = "<group>"; };
 		120C99E72331F20200AE9284 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		120C99ED2331F24400AE9284 /* String+NSLinguisticTagger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSLinguisticTagger.swift"; sourceTree = "<group>"; };
 		120C99EF2331F96000AE9284 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				1216DABE2331465500BCCD80 /* Info.plist */,
 				120C99E72331F20200AE9284 /* ArticleViewController.swift */,
 				120C99F12331FBFC00AE9284 /* StringProtocol+Range.swift */,
+				1207E94B2333E912000154D2 /* MaxScoreManager.swift */,
 			);
 			path = FilBlankTask;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1216DAB52331465400BCCD80 /* ViewController.swift in Sources */,
+				1207E94C2333E912000154D2 /* MaxScoreManager.swift in Sources */,
 				120C99F02331F96000AE9284 /* Word.swift in Sources */,
 				1216DAE3233146D900BCCD80 /* MetaViewController.swift in Sources */,
 				120C99EE2331F24400AE9284 /* String+NSLinguisticTagger.swift in Sources */,
