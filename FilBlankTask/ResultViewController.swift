@@ -15,6 +15,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var result: UIButton!
     
     var score: Int?
+    var attributedText: NSAttributedString?
     
     
     
@@ -37,5 +38,23 @@ class ResultViewController: UIViewController {
         }
         scoreLabel.text = "" + String(s)
     }
+    
+    
+    
+    //MARK: Action
+    
+    @IBAction func seeResult(_ sender: Any) {
+        
+        let storyBord = UIStoryboard(name: "Main",bundle: nil)
+        let metaViewController = storyBord.instantiateViewController(withIdentifier: "MetaViewController") as? MetaViewController
+        
+        guard let metaView = metaViewController else {
+            fatalError(" MetaViewController Identifier not found")
+        }
+        metaView.attributedText = self.attributedText!
+        self.navigationController?.pushViewController(metaView, animated: true)
+        
+    }
+    
 
 }

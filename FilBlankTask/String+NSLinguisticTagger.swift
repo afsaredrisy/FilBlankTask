@@ -35,6 +35,26 @@ extension String{
     }
     
     
+    func tag(){
+        let text = self
+        let tagger = NSLinguisticTagger(tagSchemes: [.lexicalClass], options: 0)
+        tagger.string = text
+        let range = NSRange(location: 0, length: text.utf16.count)
+        let options: NSLinguisticTagger.Options = [.omitPunctuation, .omitWhitespace]
+        tagger.enumerateTags(in: range, unit: .word, scheme: .lexicalClass, options: options) { tag, tokenRange, _ in
+            if let tag = tag {
+                let word = (text as NSString).substring(with: tokenRange)
+                print("\(word): \(tag)")
+                
+            }
+        }
+        
+        
+        
+    }
+    
+    
+    
     // Divide the whole sentance into words.
     func tokenizeWords() -> [String]{
         

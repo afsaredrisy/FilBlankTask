@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1207E9462333E7F5000154D2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1207E9452333E7F5000154D2 /* SplashViewController.swift */; };
 		120C99E82331F20200AE9284 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C99E72331F20200AE9284 /* ArticleViewController.swift */; };
 		120C99EE2331F24400AE9284 /* String+NSLinguisticTagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C99ED2331F24400AE9284 /* String+NSLinguisticTagger.swift */; };
 		120C99F02331F96000AE9284 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120C99EF2331F96000AE9284 /* Word.swift */; };
@@ -105,6 +106,7 @@
 /* Begin PBXFileReference section */
 		09F62E7D67C3A67DDE4EDE84 /* Pods-FilBlankTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilBlankTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-FilBlankTaskTests/Pods-FilBlankTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0B5EB30919AEA32B4350BDB2 /* Pods_FilBlankTask_FilBlankTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilBlankTask_FilBlankTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1207E9452333E7F5000154D2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		120C99E72331F20200AE9284 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		120C99ED2331F24400AE9284 /* String+NSLinguisticTagger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSLinguisticTagger.swift"; sourceTree = "<group>"; };
 		120C99EF2331F96000AE9284 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		1216DAA62331465400BCCD80 = {
 			isa = PBXGroup;
 			children = (
+				1207E9452333E7F5000154D2 /* SplashViewController.swift */,
 				1216DAB12331465400BCCD80 /* FilBlankTask */,
 				1216DAC62331465500BCCD80 /* FilBlankTaskTests */,
 				1216DAD12331465500BCCD80 /* FilBlankTaskUITests */,
@@ -529,6 +532,7 @@
 				120C99F22331FBFC00AE9284 /* StringProtocol+Range.swift in Sources */,
 				120C9A8823323A7900AE9284 /* Hokusai.swift in Sources */,
 				1216DAB32331465400BCCD80 /* AppDelegate.swift in Sources */,
+				1207E9462333E7F5000154D2 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

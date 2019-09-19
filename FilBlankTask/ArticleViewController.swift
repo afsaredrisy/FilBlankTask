@@ -1,10 +1,4 @@
-//
-//  ArticleViewController.swift
-//  FilBlankTask
-//
-//  Created by Afsar Sir on 18/09/19.
-//  Copyright © 2019 Afsar Sir. All rights reserved.
-//
+//VerticalCardSwiper
 
 import UIKit
 import WikipediaKit
@@ -15,6 +9,8 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
     var sentances: [String]?
     var titlem = ""
     var listItems = Set<String>()
+    var listItemsOrg = Set<String>()
+    
     
     
     
@@ -114,7 +110,7 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
         }
          print("is remove \(removedWords.count)")
         
-        let setKeys = removedWords.keys
+        /*let setKeys = removedWords.keys
        
         for key in setKeys {
             let word = removedWords[key]
@@ -122,6 +118,9 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
                 listItems.insert(word!)
             }
             
+        }*/
+        for w in listItems{
+            listItemsOrg.insert(w)
         }
         var nsSet = Set<NSRange>()
         for k in nSremovedWords.keys{
@@ -149,8 +148,21 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
         
         print("Removing from \(sentance)")
         let words = sentance.tokenizeWords()
-        let randomIndex = getRandomNumberBetweenRange(from: 0, to: words.count)
-        let stringWord = words[randomIndex]
+        var stringWord = ""
+        while true{
+            let randomIndex = getRandomNumberBetweenRange(from: 0, to: words.count)
+            stringWord = words[randomIndex]
+            //stringWord.tag()
+            if !listItems.contains(stringWord){
+                listItems.insert(stringWord)
+                break
+            }
+            
+        }
+        
+        
+        
+        
         let ranges = article?.ranges(of: stringWord)
         guard let rranges = ranges else {
             return nil
@@ -391,27 +403,46 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
     }
     
     // will implement 
-    func markWord(nsrange: NSRange, is: Bool){
+    func markWord(nsrange: NSRange, iss: Bool){
+        var color = UIColor.red
+        
+        if iss{
+            color = UIColor.green
+        }
+        
+        let newString = NSMutableAttributedString(attributedString: textView.attributedText)
+        newString.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: nsrange)
+        textView.attributedText = newString
         
         
         
     }
     
+    
+    
+    
+    
     func evaluateResult(){
         var score = 0
+        let allAttributes = getAllAttributed(textView: textView)
         for word in answer.keys {
-            
+            // will require some more time
+            guard let nsRange = allAttributes[word] else{
+                fatalError("No Range found for \(word)")
+            }
             if word == answer[word]{
                 score = score + 1
                 
-                // will require some more time
-               /* guard let nsRange = getNSRange(word: word) else{
-                    fatalError("No Range found for \(word)")
-                }
-                */
+               
+                
+                markWord(nsrange: nsRange, iss: true)
                 
                 
             }
+            else{
+                 markWord(nsrange: nsRange, iss: false)
+            }
+           
             
         }
         print("score is \(score)")
@@ -428,7 +459,11 @@ class ArticleViewController: UIViewController, UIGestureRecognizerDelegate  {
             fatalError("Some thing wrong with identifier")
         }
         viewrController.score = score
-        self.present(viewrController, animated: true, completion: nil)
+        viewrController.attributedText = textView.attributedText!
+        self.navigationController?.popViewController(animated: false)
+        self.navigationController?.pushViewController(viewrController, animated: true)
+        
+        //self.present(viewrController, animated: true, completion: nil)
         
         
     }
@@ -459,7 +494,12 @@ extension ArticleViewController{
     }
     
     
+    
+ 
+    
+    
     func placeUserSelectedWord(wordd: String, nsrange: NSRange, myTextView: UITextView){
+        
         let newString = myTextView.attributedText.stringReplaceByRange(range: nsrange, str: wordd)
         myTextView.attributedText = newString
     }
@@ -514,6 +554,25 @@ extension ArticleViewController{
         }
         actionSheet.show()
         
+        
+    }
+    
+    
+    func getAllAttributed(textView: UITextView) -> [String: NSRange]{
+        var attributs = [String: NSRange]()
+        textView.attributedText.enumerateAttributes(in: NSRange(location: 0, length: textView.attributedText.length), options: [.longestEffectiveRangeNotRequired]) { value, range, isStop in
+            
+            if listItemsOrg.contains((textView.attributedText.attributedSubstring(from: range).string)){
+                print("Found at \((textView.attributedText.attributedSubstring(from: range).string))  at \(range.location)")
+                
+                attributs[(textView.attributedText.attributedSubstring(from: range).string)] = range
+            }
+            else{
+                print("Not Contains")
+            }
+            
+        }
+        return attributs
         
     }
     
