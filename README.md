@@ -19,7 +19,7 @@ The ```User-Agent``` header is printed to your Xcode console when you make the f
    - Play game by tapping the Splash screen ```Play``` Button.
    - While playing you will be showing  ```____```  by tapping on blank a sheet will open that will contain the shuffled words you can select one of them. Filler word will be display in red color & in different font. 
    - When you will submit your solution you will get your score. System will remeber your Maximum score
-   - You can also tap on ```see result``` button to see where you made mistake in red color and where you filled currect word in green color. 
+   - You can also tap on ```see result``` button to see where you made mistake in red color and where you filled correct word in green color. 
  
 ## How it works 
 This project uses [WikipediaKit](https://github.com/Raureif/WikipediaKit) to fetch random wiki article. This library uses MediaWiki API.
