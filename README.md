@@ -1,5 +1,5 @@
 ## FilBlankGame
-Fill Blank is a fun game, you will be providing a paragraph that will contains some blank. This paragraph will be from random wikipedia page you have to fill blanks one currect fill will give you one point.
+Fill Blank is a fun game, you will be providing a paragraph that will contains some blank. This paragraph will be from random wikipedia page you have to fill blanks one correct fill will give you one point.
 
 ## Demo
   ![Alt Text](https://nsobject.s3.us-east-2.amazonaws.com/ezgif.com-optimize.gif)
